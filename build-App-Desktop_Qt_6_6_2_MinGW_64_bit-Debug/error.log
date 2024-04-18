@@ -1,0 +1,56 @@
+2024-04-18 15:25:31,034 - ERROR - An error occurred: 'charmap' codec can't encode character '\u24c8' in position 507: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\adria\Documents\Crypto\Crypto-Trading-Bot\Crypto-Trading-Bot\build-App-Desktop_Qt_6_6_2_MinGW_64_bit-Debug\test.py", line 25, in main
+    print(json.dumps(balance_info, ensure_ascii=False, indent=4))
+  File "C:\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u24c8' in position 507: character maps to <undefined>
+2024-04-18 15:28:32,282 - ERROR - An error occurred: (400, -2008, 'Invalid Api-Key ID.', {'Content-Type': 'application/json', 'Content-Length': '42', 'Connection': 'keep-alive', 'Date': 'Thu, 18 Apr 2024 12:28:33 GMT', 'Server': 'nginx', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains', 'X-Frame-Options': 'SAMEORIGIN', 'X-Xss-Protection': '1; mode=block', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': "default-src 'self'", 'X-Content-Security-Policy': "default-src 'self'", 'X-WebKit-CSP': "default-src 'self'", 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 30f34c4ade43b29ffd4cdc2465cd5c42.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'OTP50-P1', 'X-Amz-Cf-Id': 'S_W5bO6iXuRDw1N4qEuCQY6_rifsavu0Kc4zx3oDoMaK4C6iibfUKg=='}, None)
+Traceback (most recent call last):
+  File "C:\Users\adria\Documents\Crypto\Crypto-Trading-Bot\Crypto-Trading-Bot\build-App-Desktop_Qt_6_6_2_MinGW_64_bit-Debug\test.py", line 21, in main
+    balance_info = spot_client.balance()
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\binance\spot\_wallet.py", line 567, in balance
+    return self.sign_request("GET", url_path, {**kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\binance\api.py", line 84, in sign_request
+    return self.send_request(http_method, url_path, payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\binance\api.py", line 119, in send_request
+    self._handle_exception(response)
+  File "C:\Python312\Lib\site-packages\binance\api.py", line 184, in _handle_exception
+    raise ClientError(
+binance.error.ClientError: (400, -2008, 'Invalid Api-Key ID.', {'Content-Type': 'application/json', 'Content-Length': '42', 'Connection': 'keep-alive', 'Date': 'Thu, 18 Apr 2024 12:28:33 GMT', 'Server': 'nginx', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains', 'X-Frame-Options': 'SAMEORIGIN', 'X-Xss-Protection': '1; mode=block', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': "default-src 'self'", 'X-Content-Security-Policy': "default-src 'self'", 'X-WebKit-CSP': "default-src 'self'", 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 30f34c4ade43b29ffd4cdc2465cd5c42.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'OTP50-P1', 'X-Amz-Cf-Id': 'S_W5bO6iXuRDw1N4qEuCQY6_rifsavu0Kc4zx3oDoMaK4C6iibfUKg=='}, None)
+2024-04-18 15:29:28,704 - ERROR - An error occurred: (400, -2008, 'Invalid Api-Key ID.', {'Content-Type': 'application/json', 'Content-Length': '42', 'Connection': 'keep-alive', 'Date': 'Thu, 18 Apr 2024 12:29:29 GMT', 'Server': 'nginx', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains', 'X-Frame-Options': 'SAMEORIGIN', 'X-Xss-Protection': '1; mode=block', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': "default-src 'self'", 'X-Content-Security-Policy': "default-src 'self'", 'X-WebKit-CSP': "default-src 'self'", 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f9d915518ed027897fa069c929a4879c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'OTP50-P1', 'X-Amz-Cf-Id': 'UHbUfF-WA8jCZOA77DtSJ80iEVh3wEC9mYAR1aQmNdlziMO6Y41dyQ=='}, None)
+Traceback (most recent call last):
+  File "C:\Users\adria\Documents\Crypto\Crypto-Trading-Bot\Crypto-Trading-Bot\build-App-Desktop_Qt_6_6_2_MinGW_64_bit-Debug\test.py", line 21, in main
+    balance_info = spot_client.balance()
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\binance\spot\_wallet.py", line 567, in balance
+    return self.sign_request("GET", url_path, {**kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\binance\api.py", line 84, in sign_request
+    return self.send_request(http_method, url_path, payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\binance\api.py", line 119, in send_request
+    self._handle_exception(response)
+  File "C:\Python312\Lib\site-packages\binance\api.py", line 184, in _handle_exception
+    raise ClientError(
+binance.error.ClientError: (400, -2008, 'Invalid Api-Key ID.', {'Content-Type': 'application/json', 'Content-Length': '42', 'Connection': 'keep-alive', 'Date': 'Thu, 18 Apr 2024 12:29:29 GMT', 'Server': 'nginx', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains', 'X-Frame-Options': 'SAMEORIGIN', 'X-Xss-Protection': '1; mode=block', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': "default-src 'self'", 'X-Content-Security-Policy': "default-src 'self'", 'X-WebKit-CSP': "default-src 'self'", 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f9d915518ed027897fa069c929a4879c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'OTP50-P1', 'X-Amz-Cf-Id': 'UHbUfF-WA8jCZOA77DtSJ80iEVh3wEC9mYAR1aQmNdlziMO6Y41dyQ=='}, None)
+2024-04-18 20:54:23,215 - ERROR - An error occurred: (400, -2008, 'Invalid Api-Key ID.', {'Content-Type': 'application/json', 'Content-Length': '42', 'Connection': 'keep-alive', 'Date': 'Thu, 18 Apr 2024 17:54:23 GMT', 'Server': 'nginx', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains', 'X-Frame-Options': 'SAMEORIGIN', 'X-Xss-Protection': '1; mode=block', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': "default-src 'self'", 'X-Content-Security-Policy': "default-src 'self'", 'X-WebKit-CSP': "default-src 'self'", 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f41d2271ff7a71d63f0acb6d5ad5aa6a.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'OTP50-P1', 'X-Amz-Cf-Id': 'R0S3U7p8QKML-YD_SD-kvznzk4W0VznNUv34KSVo0NIaFUtFbrn1rA=='}, None)
+Traceback (most recent call last):
+  File "C:\Users\adria\Documents\Crypto\Crypto-Trading-Bot\Crypto-Trading-Bot\build-App-Desktop_Qt_6_6_2_MinGW_64_bit-Debug\login.py", line 21, in main
+    balance_info = spot_client.balance()
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\binance\spot\_wallet.py", line 567, in balance
+    return self.sign_request("GET", url_path, {**kwargs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\binance\api.py", line 84, in sign_request
+    return self.send_request(http_method, url_path, payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\binance\api.py", line 119, in send_request
+    self._handle_exception(response)
+  File "C:\Python312\Lib\site-packages\binance\api.py", line 184, in _handle_exception
+    raise ClientError(
+binance.error.ClientError: (400, -2008, 'Invalid Api-Key ID.', {'Content-Type': 'application/json', 'Content-Length': '42', 'Connection': 'keep-alive', 'Date': 'Thu, 18 Apr 2024 17:54:23 GMT', 'Server': 'nginx', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains', 'X-Frame-Options': 'SAMEORIGIN', 'X-Xss-Protection': '1; mode=block', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': "default-src 'self'", 'X-Content-Security-Policy': "default-src 'self'", 'X-WebKit-CSP': "default-src 'self'", 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f41d2271ff7a71d63f0acb6d5ad5aa6a.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'OTP50-P1', 'X-Amz-Cf-Id': 'R0S3U7p8QKML-YD_SD-kvznzk4W0VznNUv34KSVo0NIaFUtFbrn1rA=='}, None)
